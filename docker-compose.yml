@@ -1,0 +1,19 @@
+version: '3'
+services:
+    edefuzz:
+        build: ./
+        container_name: edefuzz
+        links:
+            - "edefuzz-mysql"
+        shm_size: '4gb'
+        tty: true
+    edefuzz-mysql:
+        image: mysql:8.0
+        container_name: edefuzz-mysql
+        environment:
+            - MYSQL_DATABASE=edefuzz
+            - MYSQL_ROOT_PASSWORD=password
+            - MYSQL_USER=edefuzz
+            - MYSQL_PASSWORD=password
+        tty: true
+        

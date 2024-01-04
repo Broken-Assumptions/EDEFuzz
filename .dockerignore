@@ -1,0 +1,6 @@
+# files to be ignored when creating Docker image
+
+edefuzz.log
+output.db
+report_*.txt
+targets.txt
