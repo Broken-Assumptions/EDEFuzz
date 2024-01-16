@@ -72,13 +72,16 @@ A statistical summary is generated in `report_stat.csv`. Each line in `report_st
 |---|---|---|
 | Company-A | Australia Post | auspost |
 | Company-B | Canvas | canvas |
-| Company-C | Chemist Warehouse | cw |
+| Company-C | Chemist Warehouse | chemistwarehouse |
 | Company-D | Ikea Australia | ikea |
-| Company-E | JB-HIFI | jb |
+| Company-E | JB-HIFI | jbhifi |
 | Company-F | JetStar | jetstar |
 | Company-G | Myer | myer |
 | Company-H | Volkswagen Australia | volkswagen |
 
+* Some businesses included in our Australian dataset have updated their websites (e.g. new API endpoints, the page we tested no longer accessible, etc.). The config files for those targets are revised in January 2024.
+* Company-A's website is now protected by CAPTCHA (discussed in section 5.2 RQ2). While we still provide a config file for Company-A, it may fail the preparation phase.
+* The config file for Company-B is not provided as it contains author's log-in credential.
 
 ### The Alexa Top 200 Dataset
 
