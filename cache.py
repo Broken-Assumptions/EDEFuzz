@@ -99,12 +99,16 @@ class Cacher():
             self.wait.until(EC.visibility_of_element_located((By.XPATH, item)))
         except Exception as e:
             print("Timeout waiting for element to appear: " + item)
-            print(e)
     
     def click(self, item):
         #self.wait.until(EC.element_to_be_clickable((By.XPATH, item)))
         button = self.driver.find_element("xpath", item)
-        button.click()
+        try:
+            actions = ActionChains(self.driver)
+            actions.move_to_element(button).perform()
+        except:
+            pass
+        WebDriverWait(self.driver, 1).until(EC.element_to_be_clickable(button)).click()
     
     def hover(self, item):
         ac = ActionChains(self.driver)

@@ -66,11 +66,11 @@ def fuzz(params):
 
 
 def run(args):
-    if args.nonheadless:
-        SELENIUM_OPTIONS.headless = False
+    if not args.nonheadless:
+        SELENIUM_OPTIONS_CHROME.add_argument("--headless=new")
     if args.mode == "c":  # config
         cache.generateCache(args.target, firefox=args.firefox)
-        print("Complete. Request-response cache generated in tests/ " + args.target + ".data")
+        print("Complete. Request-response cache generated in tests/" + args.target + ".data")
     elif args.mode == "f":  # fuzz
         ca = cache.loadCache(args.target)
         response = ca["response"]["body"]

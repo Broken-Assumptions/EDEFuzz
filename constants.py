@@ -14,16 +14,20 @@ SELENIUMWIRE_OPTIONS = {
 SELENIUM_OPTIONS_CHROME = Options()
 SELENIUM_OPTIONS_CHROME.add_argument("--disable-application-cache")
 SELENIUM_OPTIONS_CHROME.add_argument("--disable-gpu")
-SELENIUM_OPTIONS_CHROME.add_argument("--headless=new")
+#SELENIUM_OPTIONS_CHROME.add_argument("--headless=new")
 SELENIUM_OPTIONS_CHROME.add_argument("--no-sandbox")
-SELENIUM_OPTIONS_CHROME.add_argument("--window-size=1920,1080")
+SELENIUM_OPTIONS_CHROME.add_argument("--window-size=2560,1440")
+SELENIUM_OPTIONS_CHROME.add_argument('--ignore-certificate-errors')
+SELENIUM_OPTIONS_CHROME.add_argument('--allow-running-insecure-content')
+user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+SELENIUM_OPTIONS_CHROME.add_argument(f'user-agent={user_agent}')
 
 SELENIUM_OPTIONS_FIREFOX = FirefoxOptions()
 SELENIUM_OPTIONS_FIREFOX.add_argument("--disable-application-cache")
 SELENIUM_OPTIONS_FIREFOX.add_argument("--disable-gpu")
 SELENIUM_OPTIONS_FIREFOX.add_argument("--headless")
 SELENIUM_OPTIONS_FIREFOX.add_argument("--no-sandbox")
-SELENIUM_OPTIONS_FIREFOX.add_argument("--window-size=1920,1080")
+SELENIUM_OPTIONS_FIREFOX.add_argument("--window-size=1920,1280")
 
 
 DATABASE_MYSQL = 1

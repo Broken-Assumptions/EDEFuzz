@@ -78,6 +78,7 @@ class Engine():
             raise Exception("Could not load URL (this should never happen): " + url + str(e))
     
     def set_cookie(self, cookie):
+        return # during fuzzing phase, there is no need to set cookies
         try:
             for item in cookie.split(";"):
                 key, value = item.strip().split("=", 1)
@@ -96,7 +97,12 @@ class Engine():
     def click(self, item):
         try:
             button = self.driver.find_element("xpath", item)
-            button.click()
+            try:
+                actions = ActionChains(self.driver)
+                actions.move_to_element(button).perform()
+            except:
+                pass
+            WebDriverWait(self.driver, 1).until(EC.element_to_be_clickable(button)).click()
         except Exception as e:
             self.driver.quit()
             raise Exception("Failed to click element: " + item + str(e))
