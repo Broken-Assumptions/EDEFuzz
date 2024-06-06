@@ -2,6 +2,25 @@
 
 A tool to flag excessive data exposure vulnerabilities in web APIs. Tested on Ubuntu 20.04 and Windows 10 22H2.
 
+The design and implementation of EDEFuzz are described in our [paper](https://dl.acm.org/doi/abs/10.1145/3597503.3608133).
+
+
+## Citing EDEFuzz
+
+EDEFuzz was accepted for publication at the 46th International Conference on Software Engineering (ICSE 2024).
+
+If you use EDEFuzz in your research, please cite our ICSE'2024 paper. 
+
+```
+@inproceedings{pan2024edefuzz,
+  title={EDEFuzz: A Web API Fuzzer for Excessive Data Exposures},
+  author={Pan, Lianglu and Cohney, Shaanan and Murray, Toby and Pham, Van-Thuan},
+  booktitle={Proceedings of the 46th IEEE/ACM International Conference on Software Engineering},
+  pages={1--12},
+  year={2024}
+}
+```
+
 ## Folder structure
 
 ```
