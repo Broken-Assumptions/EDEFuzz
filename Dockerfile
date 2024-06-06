@@ -37,8 +37,7 @@ RUN mkdir $CHROMEDRIVER_DIR
 
 # Download and install latest Chromedriver
 RUN CHROMEDRIVER_VERSION=$(curl -sS https://googlechromelabs.github.io/chrome-for-testing/LATEST_RELEASE_STABLE) && \
-    wget -q --continue -P $CHROMEDRIVER_DIR https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/$CHROMEDRIVER_VERSION/linux64/chromedriver-linux64.zip
-#    wget -q --continue -P $CHROMEDRIVER_DIR https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
+    wget -q --continue -P $CHROMEDRIVER_DIR https://storage.googleapis.com/chrome-for-testing-public/$CHROMEDRIVER_VERSION/linux64/chromedriver-linux64.zip
 RUN unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
 
 # Download and install Chromedriver
