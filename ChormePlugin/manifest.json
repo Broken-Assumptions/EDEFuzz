@@ -1,0 +1,30 @@
+{
+  "name": "Chrome Interaction Recorder",
+  "description": "Record user interactions on a web page, for future replay.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/uom16.png",
+      "32": "/images/uom32.png",
+      "48": "/images/uom48.png",
+      "128": "/images/uom128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/uom16.png",
+    "32": "/images/uom32.png",
+    "48": "/images/uom48.png",
+    "128": "/images/uom128.png"
+  }
+}

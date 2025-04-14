@@ -1,0 +1,18 @@
+button {
+  height: 40px;
+  width: 90px;
+  margin: 0 15px;
+  border-radius: 4px;
+}
+
+body {
+    width: 300px;
+    height: 200px;
+    border: solid;
+}
+
+div {
+    margin: 10px;
+    padding: 10px;
+}
+
